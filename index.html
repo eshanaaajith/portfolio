@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eshanaa Ajith | Artistic Professional Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --bg-cream: #fdfbf7;
+            --brutal-black: #1a1a1a;
+            --mint: #d1f7c4;
+            --orange: #ffd8a8;
+            --lavender: #e3d5ff;
+            --pink: #ffc9c9;
+            --blue: #a5d8ff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--brutal-black);
+        }
+        h1, h2, h3, .brutal-font {
+            font-family: 'Lexend', sans-serif;
+        }
+        .neo-brutal-card {
+            border: 4px solid var(--brutal-black);
+            box-shadow: 8px 8px 0px 0px var(--brutal-black);
+            transition: all 0.2s ease;
+        }
+        .neo-brutal-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px 0px var(--brutal-black);
+        }
+        .neo-brutal-btn {
+            border: 3px solid var(--brutal-black);
+            box-shadow: 4px 4px 0px 0px var(--brutal-black);
+            transition: all 0.1s ease;
+        }
+        .neo-brutal-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px var(--brutal-black);
+        }
+        .profile-frame {
+            border: 4px solid var(--brutal-black);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            overflow: hidden;
+            box-shadow: 12px 12px 0px 0px var(--orange);
+        }
+        .contribution-cell {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .skill-progress-container {
+            border: 2px solid var(--brutal-black);
+            background: white;
+        }
+        .skill-progress-bar {
+            height: 100%;
+            border-right: 2px solid var(--brutal-black);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a1a",
+                        "mint": "#d1f7c4",
+                        "orange": "#ffd8a8",
+                        "lavender": "#e3d5ff",
+                        "pink": "#ffc9c9",
+                        "sky": "#a5d8ff"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<script>
+  fetch("https://api.github.com/users/eshanaaajith/events/public")
+    .then(res => res.json())
+    .then(data => {
+      const count = data.length;
+      document.getElementById("github-count").innerText =
+        `${count}+ public contributions recently`;
+    })
+    .catch(() => {
+      document.getElementById("github-count").innerText =
+        "GitHub contributions (live)";
+    });
+</script>
+
+<body class="selection:bg-orange selection:text-black">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<nav class="sticky top-0 z-50 w-full bg-white border-b-4 border-black">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-lavender border-2 border-black rotate-3">
+<span class="material-symbols-outlined block text-black font-bold">terminal</span>
+</div>
+<h2 class="text-2xl font-black tracking-tighter">eshanaa_ajith.dev</h2>
+</div>
+<div class="hidden md:flex items-center gap-8 font-bold text-sm uppercase tracking-wider">
+<a class="hover:underline decoration-4 underline-offset-4 decoration-mint" href="#about">About</a>
+<a class="hover:underline decoration-4 underline-offset-4 decoration-orange" href="#projects">Projects</a>
+<a class="hover:underline decoration-4 underline-offset-4 decoration-lavender" href="#skills">Skills</a>
+<a class="hover:underline decoration-4 underline-offset-4 decoration-pink" href="#contact">Contact</a>
+</div>
+<a
+  href="assets/Resume.pdf"
+  download
+  class="neo-brutal-btn bg-mint px-6 py-2 font-black text-sm uppercase inline-block"
+>
+  Download CV
+</a>
+
+</div>
+</nav>
+<main class="flex-1">
+<section class="max-w-7xl mx-auto px-6 py-16 lg:py-24" id="about">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-10">
+<div class="inline-block px-4 py-2 bg-pink border-2 border-black -rotate-2 font-bold text-sm">
+                         COMPUTER SCIENCE STUDENT @ WORK
+                    </div>
+<h1 class="text-6xl lg:text-8xl font-black leading-[0.9] tracking-tighter">
+                        Eshanaa Ajith K— Building <span class="bg-lavender px-1">solutions</span> with code.
+                    </h1>
+<p class="text-xl lg:text-2xl font-medium text-slate-700 max-w-2xl leading-snug">
+                        I merge logical corporate structures with high-energy creative aesthetics to build web experiences that actually <span class="underline decoration-wavy decoration-orange decoration-2">matter</span>.
+                    </p>
+<div class="flex flex-wrap items-center gap-6">
+<a class="neo-brutal-btn bg-black text-white px-10 py-4 font-black text-lg" href="#projects">
+                            SEE MY WORK
+                        </a>
+<div class="flex items-center gap-4">
+<a class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black hover:bg-sky transition-colors" href="https://github.com/eshanaaajith">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-white border-2 border-black hover:bg-lavender transition-colors" href="https://www.linkedin.com/in/eshanaa-ajith-405193316/?trk=public-profile-join-page">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="relative w-72 h-72 lg:w-96 lg:h-96">
+<div class="profile-frame w-full h-full bg-slate-200">
+<img alt="Eshanaa Ajith" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBIJkSE07F_N-FrsVQku0uXYG2azDfE31Y_40DkId_sudzkw6H3r9cTB1bJtClUF0U_5ee6e_yYXTjTFWJEKI0aYW-SF7rEd55IMlgKBRacQtPZ5ZdWeX7DhdyrxtddBbPWlOTugKIeHZPqq2zBviE4jIGgo-m27Vgb0RXV4B9-Lsss4jWgnPEezSn1A1awpgGRji0z_R0dDfHn6qW-BpzWaPSk7TuC4VssvMRvyCKtA4CJSMVdUHtzGHHtu7lsLdt_UNAL054ig"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-orange border-4 border-black px-6 py-2 font-black text-xl rotate-6">
+                        HELLO!
+                    </div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white border-y-4 border-black" id="projects">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+      <div>
+        <h2 class="text-5xl font-black tracking-tighter mb-4">Featured Projects</h2>
+        <p class="text-xl font-medium text-slate-600">
+          Real-world applications built through learning and experimentation.
+        </p>
+      </div>
+
+      <a class="neo-brutal-btn bg-sky px-8 py-3 font-black flex items-center gap-2"
+         href="https://github.com/eshanaaajith" target="_blank">
+        VIEW ALL REPOS
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+      <!-- MAIN PROJECT : WORDFLOW -->
+      <div class="md:col-span-8 neo-brutal-card bg-lavender flex flex-col overflow-hidden">
+
+        <!-- IMAGE -->
+        <div class="h-80 bg-white border-b-4 border-black flex items-center justify-center">
+          <img
+            src="assets/image.png"
+            alt="WordFlow NLP Illustration"
+            class="h-full w-full object-contain p-8"
+          />
+        </div>
+
+        <!-- CONTENT -->
+        <div class="p-8">
+          <div class="flex gap-3 mb-6 flex-wrap">
+            <span class="px-4 py-1 bg-white border-2 border-black font-black text-xs">PYTHON</span>
+            <span class="px-4 py-1 bg-white border-2 border-black font-black text-xs">NLP</span>
+            <span class="px-4 py-1 bg-white border-2 border-black font-black text-xs">NLTK</span>
+          </div>
+
+          <h3 class="text-4xl font-black mb-4 uppercase tracking-tight">
+            WordFlow — NLP Text Engine
+          </h3>
+
+          <p class="text-lg font-medium text-slate-800 leading-relaxed mb-8">
+            WordFlow is an NLP-powered system designed for text preprocessing,
+            keyword extraction, sentiment analysis, and linguistic insights
+            using Python-based pipelines.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="https://github.com/eshanaaajith/WordFlow.git"
+               target="_blank"
+               class="neo-brutal-btn bg-black text-white px-6 py-2 font-black text-sm">
+              GITHUB
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDE PROJECTS -->
+      <div class="md:col-span-4 flex flex-col gap-8">
+
+        <!-- AMRITAFIND -->
+        <div class="flex-1 neo-brutal-card bg-mint p-8">
+          <div class="w-16 h-16 bg-white border-4 border-black flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-4xl font-black">search</span>
+          </div>
+
+          <h3 class="text-2xl font-black mb-2 uppercase">AmritaFind</h3>
+
+          <p class="text-slate-800 font-medium mb-6">
+            A Flutter-based Lost & Found app for Amrita University enabling real-time item listings, AI-assisted matching, and secure student-to-student communication.
+          </p>
+
+          <div class="text-xs font-black bg-white inline-block px-3 py-1 border-2 border-black">
+            FLUTTER / API
+          </div>
+        </div>
+
+        <!-- FINANCE TRACKER -->
+        <div class="flex-1 neo-brutal-card bg-orange p-8">
+          <div class="w-16 h-16 bg-white border-4 border-black flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-4xl font-black">
+              account_balance_wallet
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-black mb-2 uppercase">Finance Tracker</h3>
+
+          <p class="text-slate-800 font-medium mb-6">
+            A Flutter-based mobile application for tracking expenses,
+            categorizing spending, and visualizing personal finance data.
+          </p>
+
+          <div class="text-xs font-black bg-white inline-block px-3 py-1 border-2 border-black">
+            FLUTTER / DART
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="py-24" id="skills">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16">
+      <h2 class="text-5xl font-black tracking-tighter mb-4">Technical Arsenal</h2>
+      <p class="text-xl font-medium text-slate-600">
+        Technologies I actively use and build with.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- LANGUAGES -->
+      <div class="neo-brutal-card bg-white p-8">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-pink border-2 border-black flex items-center justify-center">
+            <span class="material-symbols-outlined font-black">code</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase">Languages</h3>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- JAVA -->
+          <div class="space-y-2">
+            <div class="flex justify-between font-black text-sm">
+              <span>JAVA</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-progress-container h-6 overflow-hidden">
+              <div class="skill-progress-bar bg-mint" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <!-- PYTHON -->
+          <div class="space-y-2">
+            <div class="flex justify-between font-black text-sm">
+              <span>PYTHON</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-progress-container h-6 overflow-hidden">
+              <div class="skill-progress-bar bg-orange" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <!-- C -->
+          <div class="space-y-2">
+            <div class="flex justify-between font-black text-sm">
+              <span>C</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-progress-container h-6 overflow-hidden">
+              <div class="skill-progress-bar bg-sky" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <!-- FLUTTER / DART -->
+          <div class="space-y-2">
+            <div class="flex justify-between font-black text-sm">
+              <span>FLUTTER (DART)</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-progress-container h-6 overflow-hidden">
+              <div class="skill-progress-bar bg-lavender" style="width: 80%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FRAMEWORKS / APIS -->
+      <div class="neo-brutal-card bg-white p-8">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-sky border-2 border-black flex items-center justify-center">
+            <span class="material-symbols-outlined font-black">layers</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase">Frameworks & APIs</h3>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="neo-brutal-btn bg-lavender px-4 py-2 font-black text-sm">FLUTTER</span>
+          <span class="neo-brutal-btn bg-mint px-4 py-2 font-black text-sm">FASTAPI</span>
+          <span class="neo-brutal-btn bg-orange px-4 py-2 font-black text-sm">REST APIs</span>
+          <span class="neo-brutal-btn bg-white px-4 py-2 font-black text-sm">HTML / CSS</span>
+        </div>
+      </div>
+
+      <!-- DATABASES & TOOLS -->
+      <div class="neo-brutal-card bg-white p-8">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-mint border-2 border-black flex items-center justify-center">
+            <span class="material-symbols-outlined font-black">storage</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase">Databases & Tools</h3>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="neo-brutal-btn bg-white px-4 py-2 font-black text-sm">MYSQL</span>
+          <span class="neo-brutal-btn bg-pink px-4 py-2 font-black text-sm">POSTGRESQL</span>
+          <span class="neo-brutal-btn bg-sky px-4 py-2 font-black text-sm">GIT</span>
+          <span class="neo-brutal-btn bg-orange px-4 py-2 font-black text-sm">DOCKER</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-24 bg-sky/20 border-t-4 border-black" id="github">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
+      <div>
+        <h2 class="text-4xl font-black tracking-tight uppercase">
+          GitHub Pulse
+        </h2>
+        <p class="text-lg font-bold">
+          Live contribution activity
+        </p>
+      </div>
+
+      <!-- LEGEND -->
+      <div class="flex gap-3 items-center bg-white border-2 border-black px-6 py-3">
+        <span class="text-xs font-black uppercase">Less</span>
+
+        <div class="contribution-cell bg-slate-200"></div>
+        <div class="contribution-cell bg-mint"></div>
+        <div class="contribution-cell bg-sky"></div>
+        <div class="contribution-cell bg-orange"></div>
+        <div class="contribution-cell bg-pink"></div>
+
+        <span class="text-xs font-black uppercase">More</span>
+      </div>
+    </div>
+
+    <!-- CONTRIBUTION CALENDAR (STABLE) -->
+    <div class="neo-brutal-card bg-white p-6 overflow-x-auto">
+      <img
+        src="https://ghchart.rshah.org/1a1a1a/eshanaaajith"
+        alt="Eshanaa Ajith GitHub Contributions"
+        class="w-full"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-32 bg-orange" id="contact">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-6xl lg:text-8xl font-black mb-12 tracking-tighter leading-none">
+                    LET'S BUILD SOMETHING COOL!
+                </h2>
+<p class="text-2xl font-bold mb-12 text-slate-800">
+                    Always open for collaborations, research, or a quick coffee chat.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="neo-brutal-btn bg-black text-white px-12 py-6 font-black text-2xl" href="mailto:hello@eshanajith.com">
+                        SAY HELLO
+                    </a>
+<a class="neo-brutal-btn bg-white px-12 py-6 font-black text-2xl"  href="assets/Resume.pdf">
+                        VIEW RESUME
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t-4 border-black py-12">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="text-lg font-black tracking-tight">© 2024 ESHANAA AJITH — MADE WITH ⚡ AND CODE</p>
+<div class="flex gap-8">
+<a class="font-black hover:text-orange transition-colors" href="https://github.com/eshanaaajith">GITHUB</a>
+<a class="font-black hover:text-lavender transition-colors" href="https://www.linkedin.com/in/eshanaa-ajith-405193316/?trk=public-profile-join-page">LINKEDIN</a>
+<a class="font-black hover:text-sky transition-colors" href="https://www.instagram.com/eshanaa_ajith?igsh=NWd6YXp4dWFkMGRu&utm_source=qr">INSTAGRAM</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
