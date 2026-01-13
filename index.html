@@ -63,36 +63,41 @@
             border-right: 2px solid var(--brutal-black);
         }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1a1a1a",
-                        "mint": "#d1f7c4",
-                        "orange": "#ffd8a8",
-                        "lavender": "#e3d5ff",
-                        "pink": "#ffc9c9",
-                        "sky": "#a5d8ff"
+    <script id="tailwind-config">
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#1a1a1a",
+                            "mint": "#d1f7c4",
+                            "orange": "#ffd8a8",
+                            "lavender": "#e3d5ff",
+                            "pink": "#ffc9c9",
+                            "sky": "#a5d8ff"
+                        }
                     }
                 }
             }
-        }
     </script>
 </head>
+
+
 <script>
-  fetch("https://api.github.com/users/eshanaaajith/events/public")
-    .then(res => res.json())
-    .then(data => {
-      const count = data.length;
-      document.getElementById("github-count").innerText =
-        `${count}+ public contributions recently`;
-    })
-    .catch(() => {
-      document.getElementById("github-count").innerText =
-        "GitHub contributions (live)";
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const chartContainer = document.getElementById("github-chart");
+    const GITHUB_USERNAME = "eshanaaajith";
+
+    if (!chartContainer) return;
+
+    const img = document.createElement("img");
+    img.src = `https://ghchart.rshah.org/1a1a1a/${GITHUB_USERNAME}`;
+    img.alt = "GitHub Contributions";
+    img.className = "w-full";
+
+    chartContainer.appendChild(img);
+  });
 </script>
+
 
 <body class="selection:bg-orange selection:text-black">
 <div class="relative flex h-auto min-h-screen w-full flex-col">
@@ -149,7 +154,7 @@
 </div>
 <div class="relative w-72 h-72 lg:w-96 lg:h-96">
 <div class="profile-frame w-full h-full bg-slate-200">
-<img alt="Eshanaa Ajith" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBIJkSE07F_N-FrsVQku0uXYG2azDfE31Y_40DkId_sudzkw6H3r9cTB1bJtClUF0U_5ee6e_yYXTjTFWJEKI0aYW-SF7rEd55IMlgKBRacQtPZ5ZdWeX7DhdyrxtddBbPWlOTugKIeHZPqq2zBviE4jIGgo-m27Vgb0RXV4B9-Lsss4jWgnPEezSn1A1awpgGRji0z_R0dDfHn6qW-BpzWaPSk7TuC4VssvMRvyCKtA4CJSMVdUHtzGHHtu7lsLdt_UNAL054ig"/>
+<img alt="Eshanaa Ajith" class="w-full h-full object-cover" src="assets/pic.png"/>
 </div>
 <div class="absolute -bottom-4 -right-4 bg-orange border-4 border-black px-6 py-2 font-black text-xl rotate-6">
                         HELLO!
@@ -387,27 +392,26 @@
       </div>
 
       <!-- LEGEND -->
-      <div class="flex gap-3 items-center bg-white border-2 border-black px-6 py-3">
+      <div class="flex gap-3 items-center bg-[var(--bg-cream)] border-2 border-black px-6 py-3">
         <span class="text-xs font-black uppercase">Less</span>
 
-        <div class="contribution-cell bg-slate-200"></div>
-        <div class="contribution-cell bg-mint"></div>
-        <div class="contribution-cell bg-sky"></div>
-        <div class="contribution-cell bg-orange"></div>
-        <div class="contribution-cell bg-pink"></div>
+        <div class="contribution-cell" style="background:#eeeeee"></div>
+        <div class="contribution-cell" style="background:#d6d6d6"></div>
+        <div class="contribution-cell" style="background:#9e9e9e"></div>
+        <div class="contribution-cell" style="background:#4a4a4a"></div>
+        <div class="contribution-cell" style="background:#000000"></div>
 
         <span class="text-xs font-black uppercase">More</span>
       </div>
+
     </div>
 
     <!-- CONTRIBUTION CALENDAR (STABLE) -->
-    <div class="neo-brutal-card bg-white p-6 overflow-x-auto">
-      <img
-        src="https://ghchart.rshah.org/1a1a1a/eshanaaajith"
-        alt="Eshanaa Ajith GitHub Contributions"
-        class="w-full"
-      />
-    </div>
+    <div
+      id="github-chart"
+      class="neo-brutal-card bg-white p-6 overflow-x-auto"
+    ></div>
+
 
   </div>
 </section>
@@ -438,6 +442,12 @@
 <div class="flex gap-8">
 <a class="font-black hover:text-orange transition-colors" href="https://github.com/eshanaaajith">GITHUB</a>
 <a class="font-black hover:text-lavender transition-colors" href="https://www.linkedin.com/in/eshanaa-ajith-405193316/?trk=public-profile-join-page">LINKEDIN</a>
+<a
+  class="font-black hover:text-mint transition-colors"
+  href="mailto:eshanaaajith20@gmail.com?subject=Hello%20Eshanaa&body=Hi%20Eshanaa,%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+>
+  MAIL
+</a>
 <a class="font-black hover:text-sky transition-colors" href="https://www.instagram.com/eshanaa_ajith?igsh=NWd6YXp4dWFkMGRu&utm_source=qr">INSTAGRAM</a>
 </div>
 </div>
